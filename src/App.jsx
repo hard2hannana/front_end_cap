@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
-import Main from "./components/Main";
+import Specials from "./components/Specials";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
     <>
       <Nav />
       <Header />
-      <Main />
+      <Specials />
       <Footer />
     </>
   );
