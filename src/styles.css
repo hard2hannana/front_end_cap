@@ -333,6 +333,72 @@ main {
   padding: 1rem;
   margin: 0;
 }
+.reviews {
+  background: rgb(73, 94, 87);
+  padding: 10rem 0;
+}
+.reviews-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Markazi Text", serif;
+  margin-bottom: 2rem;
+}
+.reviews-header h2 {
+  font-size: 7em;
+  color: #fffefe;
+  margin: 0;
+}
+.reviews-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 375px));
+  justify-content: center;
+  padding: 5rem;
+  gap: 2rem;
+}
+.card-item {
+  width: 375px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #efeded;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+.review-card-stars {
+  padding: 5rem;
+  aspect-ratio: 1 / 1;
+}
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.reviewer h3 {
+  margin: 0;
+}
+.reviewer img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.reviewer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reviewer-text h4 {
+  margin: 0;
+}
+.review-date {
+  font-size: 0.75rem;
+  color: #202020;
+  margin-top: 0.25rem;
+}
 /* Footer */
 footer {
   text-align: center;
