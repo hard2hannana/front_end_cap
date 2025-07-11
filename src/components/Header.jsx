@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container">
-        <div className="header-text">
+        <div className="header-content">
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
             <p>
@@ -16,8 +16,8 @@ export default function Header() {
               Reserve a table
             </button>
         </div>
-        <div className="header-apps">
-          <img src={ image1 } alt="served appetizers" />
+        <div className="header-image">
+        
         </div>
       </div>
     </header>

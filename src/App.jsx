@@ -9,10 +9,10 @@ export default function App() {
   return (
     <>
       <Nav />
-      <Header />
+      {/* <Header />
       <Specials />
       <Reviews />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
