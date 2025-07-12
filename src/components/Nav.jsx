@@ -11,7 +11,7 @@ export default function Nav() {
 
   return (
     <nav className="navbar">
-        <div className="container">
+        <div className="container container-nav">
           <img src={logo} alt="Little Lemon Logo" className="logo" />
           <button class="hamburger" id="hamburger" onClick={toggleMenu}>&#9776;</button>
             <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>

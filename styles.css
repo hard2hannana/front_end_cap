@@ -1,19 +1,73 @@
 /* App.css - apply to all layout sections */
+:root {
+  --bgColour: #f2f2f2;
+  --pGreen: #495e57;
+  --pYellow: #f4ce14;
+  --pYellowHover: #f7dc57;
+  --sSalmon: #ee9972;
+  --sPeach: #fbdabb;
+  --sSeashell: #fdf4ee;
+  --highlight: #edefee;
+  --bH: #212121;
+  --bP: #333;
+  --wPH: #f4f4f4;
+  --hFont: "Markazi Text", serif;
+  --pFont: "Karla", sans-serif;
+}
 * {
   outline: 1px solid red;
   /* Helps you see what's spilling out */
 }
 body {
   margin: 0;
+  font-family: var(--pFont);
+  font-weight: 400;
+}
+a,
+h1,
+h2,
+h3 {
+  font-family: var(--hFont);
+  font-weight: 400;
+  margin: 0;
+  line-height: .8;
+}
+.header-content h1{
+  color: var(--pYellow);
+  font-size: 8rem;
+  overflow-x: visible;
+  white-space: nowrap;
+  
+}
+h1 {
+  font-size: 8rem;
+ margin: 0;
+}
+h2 {
+  font-size: 5rem;
+  font-weight: 400;
+  }
+p {
+  font-size: 2.2rem;
+  letter-spacing: 1.1;
+  line-height: 1.5;
+  opacity: .9;
 }
 img {
   width: 100%;
   display: block;
 }
 .container {
-  display: flex;
-  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto;
 }
+.container-nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5em 0;
+}
+/* Text */
+
 /* navbar */
 .nav-links {
   display: none;
@@ -31,8 +85,7 @@ img {
 a {
   text-decoration: none;
   color: #333;
-  font-size: 1.5rem;
-  font-family: 'karla', sans-serif;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -64,27 +117,23 @@ a {
 
 .navbar {
   background-color: #e6e6e6;
-  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 .logo img{
     display: block;
 } 
 .logo {
-    width: 10rem
+    width: 20rem
 }
 
  /* Responsive Styles  */
-
  @media (min-width: 700px) {
   .hamburger {
     display: none;
-
   }
   .container {
     width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     margin: 0 auto;
   }
   .nav-links {
@@ -96,10 +145,34 @@ a {
       gap: 2rem;
   }
 } 
-/* Main */
-main {
-  background-color: #fdfdfd;
+header {
+  background: #495e57;
 }
+@media (min-width: 700px) {
+  .container-body {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+  main {
+   width: 55%;
+  }
+  aside {
+    width: 45%;
+  }
+  .header-content {
+    color: #fff;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .header-image img {
+    max-width: 50em;
+  }
+  
+  }
+
+
+/* Specials */
 
 .specials {
   margin: 0 auto;

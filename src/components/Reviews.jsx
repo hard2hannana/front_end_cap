@@ -11,8 +11,8 @@ export default function Reviews() {
       <div className="card-item">
           <div className="review-card-stars">
             <h2>⭐ ⭐ ⭐ ⭐ ⭐</h2>
-            <h2>Review title</h2>
-            <h3>Review body</h3>
+            <p>Review title</p>
+            <p>Review body</p>
             <div className="reviewer">
               <img src="/src/assets/mid60female.png" alt="" />
               <div className="reviewer-text">
