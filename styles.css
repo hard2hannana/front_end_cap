@@ -187,46 +187,15 @@ header {
 .header-image img {
   display: none;
 }
-@media (min-width: 700px) {
-  .container-body {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-    main {
-    width: 55%;
-  }
-    aside {
-      width: 45%;
-  }
-    h1 {
-      overflow-x: visible;
-        white-space: nowrap;
-  }
-    .header-content {
-      width: 70%;
-      margin: 10em auto;
-  }
-    .header-image img {
-      display: flex;
-      max-width: 50em;
-      border-radius: 2rem;
-      margin: 3em 2em -5em 0;
-  }
-}
 /* Specials */
 
 .specials {
   margin: 0 auto;
 }
-.card {
-  background-color: #edefee;
-  color: #2c2c2c;
+.cards {
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.2s ease;
-  margin-bottom: 0.5em;
+  margin-bottom: 2em;
 }
 .card:hover {
   transform: scale(1.02);
@@ -235,23 +204,23 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #efeded;
+  max-width: 600px;
+  background-color: #edefee;
   border-radius: 12px;
-  padding-top: 1em;
   margin-bottom: 2em;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  transition: transform 0.2s ease;
+  transition: transform 0.32s ease-out;
 }
 .card-item:last-child {
   margin-bottom: 0;
 }
 .card img {
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 0.5em;
 }
 .card-content {
-  padding: 1rem 1rem;
+  padding: 1.5em
 }
 .flex {
   display: flex;
@@ -267,17 +236,19 @@ header {
   border-radius: 50%;
   height: auto;
 }
+
 .stars {
   font-size: 2rem;
 }
 .reviews {
   background: rgb(73, 94, 87);
-  text-align: center;
+  padding-bottom: 5rem;
 }
 .reviews-title {
   font-size: 3.2rem;
   font-weight: 700;
   padding-bottom: 2rem;
+  text-align: center;
 }
 .flex-center {
   display: flex;
@@ -289,6 +260,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 1.5em;
 }
 .review-date {
   font-size: 1rem;
@@ -302,4 +274,60 @@ footer {
   background-color: #f4f4f4;
   border-top: 1px solid #ddd;
   font-size:.0.9rem;
+}
+@media (min-width: 700px) {
+  .container-body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main {
+    width: 55%;
+  }
+
+  aside {
+    width: 45%;
+  }
+
+  h1 {
+    font-size: 9rem;
+    overflow-x: visible;
+    white-space: nowrap;
+  }
+  h2 {
+    font-size: 5rem;
+  }
+  .reviews-title {
+    font-size: 5rem;
+    padding: 2em 0;
+  }
+  .header-content {
+    width: 70%;
+    margin: 10em auto;
+  }
+  .header-image img {
+    display: flex;
+    max-width: 50em;
+    border-radius: 2rem;
+    margin: 3em 2em -5em 0;
+  }
+  .specials-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5em 0;
+  }
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+  }
+  .spacing {
+    justify-content: center;
+    gap: 3em;
+  
+  }
+  .card-item:last-child {
+    margin-bottom: 2em
+  }
 }
