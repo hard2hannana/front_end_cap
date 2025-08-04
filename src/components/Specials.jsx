@@ -8,18 +8,15 @@ import lemonDessert from "../assets/lemonDessert.jpg";
 export default function Specials() {
   return (
     <section className="specials ">
-      <div className="container">
-        <div className="specials">
-          <div className="specials-title">
-            <h2>This week's specials!</h2>
-            <button>Order Online</button>
-          </div>
-            <div className="specials-body">
-              <div className="cards">
+            <div className="container specials-body">
+              <div className="card-title">
+                <h2>This week's specials!</h2>
+                <button>Order Online</button>
+              </div>
                 <div className="card-item">
-                  <img src={greekSalad} alt="Greek Salad" />
+                  <img className="card-image" src={greekSalad} alt="Greek Salad" />
                   <div className="card-content">
-                    <div className="flex">
+                    <div className="image-caption">
                       <h3>Greek Salad</h3>
                       <h4>$12.99</h4>
                     </div>
@@ -31,9 +28,9 @@ export default function Specials() {
                   </div>
                 </div>
                 <div className="card-item">
-                  <img src={bruchetta} alt="Special 1" />
+                  <img className="card-image" src={bruchetta} alt="Special 1" />
                   <div className="card-content">
-                    <div className="flex">
+                    <div className="image-caption">
                       <h3>Greek Salad</h3>
                       <h4>$12.99</h4>
                     </div>
@@ -45,9 +42,9 @@ export default function Specials() {
                   </div>
                 </div>
                 <div className="card-item">
-                  <img src={lemonDessert} alt="Special 1" />
+                  <img className="card-image" src={lemonDessert} alt="Special 1" />
                   <div className="card-content">
-                    <div className="flex">
+                    <div className="image-caption">
                       <h3>Greek Salad</h3>
                       <h4>$12.99</h4>
                     </div>
@@ -59,9 +56,6 @@ export default function Specials() {
                   </div>
                 </div>
               </div>
-            </div>
-        </div>
-      </div>
     </section>
   );
 }
