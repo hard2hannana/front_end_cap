@@ -1,13 +1,15 @@
 import car from "../assets/car.png";
 import specials from "../data/specialsData";
-
+import FadeUpOnScroll from "./FadeUpOnScroll";
 
 export default function Specials() {
   return (
     <section className="specials ">
             <div className="container specials-body">
               <div className="card-title">
+                <FadeUpOnScroll>
                 <h2>This week's specials!</h2>
+                </FadeUpOnScroll>
                 <button>Order Online</button>
               </div>
                  {specials.map((dish) => (
@@ -22,7 +24,7 @@ export default function Specials() {
                 <p>{dish.description}</p>
               </div>
               <div className="card-footer">
-                <h3 className="push-down">Order Delivery</h3>
+                <h3>Order Delivery</h3>
                 <img src={car} alt="small car icon" />
               </div>
             </div>

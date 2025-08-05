@@ -33,6 +33,18 @@ h4 {
   margin: 0;
   line-height: .8;
 }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.9s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .header-content {
   color: #fff;
 }
@@ -40,12 +52,13 @@ h4 {
   color: var(--pYellow);
 }
 .header-subtitle {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
-.header-content p {
+.header-para {
   color: var(--wPH);
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 400 ;
+  padding-bottom: 1em;
 }
 h1 {
   font-size: 4rem;
@@ -65,7 +78,7 @@ h2 {
     font-weight: 700;
   }
 p {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: var(--bP);
   letter-spacing: 1.1;
   line-height: 1.5;
@@ -80,24 +93,24 @@ button {
   background-color: var(--pYellow);
   color: #333;
   border: 1px solid #000;
-  padding: 2rem 4.5rem;
+  padding: 1.7rem 3.5rem;
   border-radius: 25px;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-  margin-top: 1em;
+  transition: background-color 0.3s ease, transform 0.32s ease-out;
 }
 button:hover {
   background-color: var(--pYellowHover);
+  transform: scale(1.05);
 }
 .navbar {
   background-color: var(--bgColour);
   position: relative;
 }
 .container {
-  width: 90%;
+  width: 85%;
   max-width: 1600px;
   margin: 0 auto;
 } 
@@ -105,10 +118,9 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  padding: 1em;
 }
 .container-body {
-  padding: 2em 0;
+  padding: .2em 0;
 }
 
 /* Text */
@@ -132,7 +144,7 @@ button:hover {
 a {
   text-decoration: none;
   color: #333;
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
 }
 .nav-links li {
@@ -165,7 +177,7 @@ a {
     display: block;
 } 
 .logo {
-    width: 10rem
+    width: 5rem
 }
 
  /* Responsive Styles  */
@@ -178,7 +190,7 @@ a {
   }
   
   .container-nav {
-    padding: 5em 0;
+    padding: 1.5em 0;
   }
   .nav-links {
     position: static;
@@ -187,7 +199,7 @@ a {
     border: none;
     padding: 0;
     background: none;
-    gap: 2rem;
+    gap: .2em;
   }
   .nav-links li {
     border-bottom: 0;
@@ -195,7 +207,7 @@ a {
 } 
 header {
   background: var(--pGreen);
-  padding-top: 2em;
+ 
 }
 
 .header-image img {
@@ -213,6 +225,8 @@ header {
   justify-content: space-between;
 }
 .card-item {
+  display: flex;
+  flex-direction: column;
   background-color: var(--highlight);
   border-radius: 25px;
   border: 2px solid var(--bP);
@@ -230,14 +244,15 @@ header {
 .card-item:hover {
   transform: scale(1.05);
   box-shadow: 8px 9px 10px rgba(0, 0, 0, 0.7);
-  cursor: pointer;
+  cursor: pointer
 }
 .card-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5em
+  padding: .5em;
+  
 }
 .image-caption {
   display: flex;
@@ -261,27 +276,26 @@ header {
   display: flex;
   justify-content: space-between;
 }
-/* .push-down {
-  margin-top: auto;
-} */
+
 .card-footer img {
   width: 40px;
   height: auto;
 }
 .stars {
-  font-size: 2rem;
+  font-size: 1.4rem;
+  padding: 6px;
+  text-align: center;
 }
 .reviews {
   background: var(--sSeashell);
   padding-bottom: 5rem;
 }
 .reviews-title {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   padding-bottom: 2rem;
   text-align: center;
 }
-
 .reviewer-details {
   display: flex;
   flex-direction: column;
@@ -328,12 +342,12 @@ footer {
   }
 
   h1 {
-    font-size: 9rem;
+    font-size: 6rem;
     overflow-x: visible;
     white-space: nowrap;
   }
   h2 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   button {
     align-self: start;
@@ -344,11 +358,11 @@ footer {
   }
   .header-content {
     width: 70%;
-    margin: 10em 0;
+    margin: 6em 0;
   }
   .header-image img {
     display: flex;
-    max-width: 50em;
+    max-width: 30em;
     border-radius: 2rem;
     margin: 3em 2em -5em 0;
   }
@@ -357,23 +371,24 @@ footer {
   }
   .specials-body {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 5em;
   }
   .card-title {
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
   }
   .card-item {
     margin-bottom: 5em;
   }
   .review-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5em;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2em;
     padding: 2em 0 4em;
+   
   }
   .reviews-title {
     grid-column: 1 / -1;
@@ -386,7 +401,7 @@ footer {
     gap: 5em;
   }
     .flex-container img {
-      width: 200px;
+      width: 150px;
       height: auto;
     }
     .foot-title {
@@ -407,7 +422,7 @@ footer {
     .foot-links a{
       color: var(--bH);
       font-family: var(--pFont);
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       font-weight: 300;
   
 

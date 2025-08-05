@@ -1,10 +1,13 @@
 import reviews from "../data/reviewsData";
+import FadeUpOnScroll from "./FadeUpOnScroll";
 
 export default function Reviews() {
   return (
     <section className="reviews">
       <div className="container review-content">
-        <h2 className="reviews-title">Our customers love us!</h2>
+        <FadeUpOnScroll>
+          <h2 className="reviews-title">Our customers love us!</h2>
+        </FadeUpOnScroll>
          {reviews.map((review) => (
           <div className="review-card" key="reviews.id">
             <div className="card-header">
