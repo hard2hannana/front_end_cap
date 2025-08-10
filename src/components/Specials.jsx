@@ -13,9 +13,9 @@ export default function Specials() {
                 <button>Order Online</button>
               </div>
                  {specials.map((dish) => (
-          <div className="card-item" key={dish.id}>
-            <img className="card-image" src={dish.image} alt={dish.name} />
-            <div className="card-content">
+              <div className="card-item" key={dish.id}>
+                <img className="card-image" src={dish.image} alt={dish.name} />
+              <div className="card-content">
               <div className="image-caption">
                 <h3>{dish.name}</h3>
                 <h4>{dish.price}</h4>

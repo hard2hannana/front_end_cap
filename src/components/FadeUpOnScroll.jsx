@@ -10,7 +10,7 @@ export default function FadeUpOnScroll({ children }) {
     const observer = new IntersectionObserver(([entry]) => {
         setVisible(entry.isIntersecting);
       
-    }, { threshold: 0.4 });
+    }, { threshold: 0.3 });
 
     if (ref.current) observer.observe(ref.current);
 

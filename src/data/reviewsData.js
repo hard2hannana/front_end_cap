@@ -24,7 +24,7 @@ const reviews = [
     reviewImage: saraL,
     reviewer: "Sara Lopez",
     date: "07/23/2024",
-    body: "Brought my wife foe our anniversary, we both loved everything."
+    body: "Brought my wife for our anniversary, we both loved everything."
   },
   {
     id: 4,

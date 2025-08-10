@@ -18,7 +18,7 @@ export default function Reviews() {
                 </div>
             </div>
             <div className="card-content">
-              <h3 className="stars">⭐ ⭐ ⭐ ⭐ ⭐</h3>
+              <h3 className="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</h3>
               <p>{review.body}</p>
             </div>
           </div>

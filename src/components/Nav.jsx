@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/Logo.svg";
-
+import { NavLink } from "react-router-dom";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,22 +16,22 @@ export default function Nav() {
             <button className="hamburger" id="hamburger" onClick={toggleMenu}>&#9776;</button>
               <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
                 <li>
-                  <a href="#home">Home</a>
+                  <NavLink to="/" end className={({ isActive }) => isActive ? "active" : undefined}>Home</NavLink>
                 </li>
                 <li>
-                  <a href="#about">About</a>
+                  <NavLink to="/about" end className={({ isActive }) => isActive ? "active" : undefined}>About</NavLink>
                 </li>
                 <li>
-                  <a href="#about">Menu</a>
+                  <NavLink to="/menu" end className={({ isActive }) => isActive ? "active" : undefined}>Menu</NavLink>
                 </li>
                 <li>
-                  <a href="#about">Reservations</a>
+                 <NavLink to="/reservations" end className={({ isActive }) => isActive ? "active" : undefined}>Reservations</NavLink>
                 </li>
                 <li>
-                  <a href="#about">Order Online</a>
+                  <NavLink to="/orderOnline" end className={({ isActive }) => isActive ? "active" : undefined}>Order online</NavLink>
                 </li>
                 <li>
-                  <a href="#about">Login</a>
+                 <NavLink to="/reservations" end className={({ isActive }) => isActive ? "active" : undefined}>Login</NavLink>
                 </li>
               </ul>
         </div>
