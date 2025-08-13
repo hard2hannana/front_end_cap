@@ -21,7 +21,7 @@ const specials = [
     price: "$5.99",
 },
   {
-    id: 2,
+    id: 3,
     image: lemonDessert,
     name: "Lemon Dessert",  
     description:

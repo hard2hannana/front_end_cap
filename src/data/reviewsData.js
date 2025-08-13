@@ -6,28 +6,28 @@ import miaT from "../assets/MiaThompson.png";
 
 const reviews = [
   {
-    id: 1,
+    id: 11,
     reviewImage: janet,
     reviewer: "Janet Springs",
     date: "02/21/2024",
     body: "Excellent meal, highly recommend the mac and cheese."
   },
   {
-    id: 2,
+    id: 12,
     reviewImage: miaM,
     reviewer: "Mia Maria",
     date: "05/14/2024",
     body: "Both the Bruchetta and the Lemon Dessert were amazing!"
   },
   {
-    id: 3,
+    id: 13,
     reviewImage: saraL,
     reviewer: "Sara Lopez",
     date: "07/23/2024",
     body: "Brought my wife for our anniversary, we both loved everything."
   },
   {
-    id: 4,
+    id: 14,
     reviewImage: miaT,
     reviewer: "mia Thompson",
     date: "01/05/2025",
