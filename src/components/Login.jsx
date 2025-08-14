@@ -5,7 +5,7 @@ import AuthToggle from "./AuthToggle";
 import SignInFields from "./SignInFields";
 import SignUpFields from "./SignUpFields";  
 import { useNavigate } from "react-router-dom";
-
+import { toast } from "react-toastify";
 
   export default function Login() {
     const [mode, setMode] = useState("signin");
@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
     const handleSubmit = (e) => {
     e.preventDefault();                 // stop real form submit
-    alert("Signed in successfully!");
+    toast.success("Signed in successfully");
     navigate("/"); 
     }
   return (

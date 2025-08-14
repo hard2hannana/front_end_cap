@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import google from "../assets/google.png";
-
+import { toast } from "react-toastify";
 
 export default function GoogleButton() {
 
   const navigate = useNavigate();
 
   const handleClick = () => {
+    toast.success("Signed in with Google!");
     navigate("/");
-    alert("Signed in with Google successfully");
   }
   return (
     <button className="google-btn" onClick={handleClick}>

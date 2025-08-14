@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Specials from "./components/Specials";
@@ -13,6 +15,7 @@ export default function App() {
   return (
     <Router basename="/front_end_cap">
       <ScrollToTop />
+      <ToastContainer position="top-center" autoClose={2000} theme="colored" />
       <Nav />
       <Routes>
         <Route

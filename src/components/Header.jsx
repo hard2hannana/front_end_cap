@@ -16,7 +16,7 @@ export default function Header() {
                 We are a family owned Mediterranean restaurant, focused on traditional
                 recipes served with a modern twist.
               </p>
-              <button>
+              <button className="hdr-btn">
                 Reserve a table
               </button>
           </div>

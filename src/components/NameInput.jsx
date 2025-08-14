@@ -6,6 +6,7 @@ export default function NameInput() {
       id="name"
       name="name"
       placeholder="Full Name"
+      required={true}
     />
   );
 }

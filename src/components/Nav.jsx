@@ -22,6 +22,7 @@ export default function Nav() {
               to="/"
               end
               className={({ isActive }) => (isActive ? "active" : undefined)}
+              onClick={toggleMenu}
             >
               Home
             </NavLink>
@@ -31,6 +32,7 @@ export default function Nav() {
               to="/about"
               end
               className={({ isActive }) => (isActive ? "active" : undefined)}
+              onClick={toggleMenu}
             >
               About
             </NavLink>
@@ -40,6 +42,7 @@ export default function Nav() {
               to="/menu"
               end
               className={({ isActive }) => (isActive ? "active" : undefined)}
+              onClick={toggleMenu}
             >
               Menu
             </NavLink>
@@ -49,6 +52,7 @@ export default function Nav() {
               to="/reservations"
               end
               className={({ isActive }) => (isActive ? "active" : undefined)}
+              onClick={toggleMenu}
             >
               Reservations
             </NavLink>
@@ -58,6 +62,7 @@ export default function Nav() {
               to="/orderOnline"
               end
               className={({ isActive }) => (isActive ? "active" : undefined)}
+              onClick={toggleMenu}
             >
               Order online
             </NavLink>
@@ -67,6 +72,7 @@ export default function Nav() {
               to="/login"
               end
               className={({ isActive }) => (isActive ? "active" : undefined)}
+              onClick={toggleMenu}
             >
               Login
             </NavLink>

@@ -6,6 +6,7 @@ export default function EmailInput() {
       id="email"
       name="email"
       placeholder="&#x2709;  Email"
+      required={true}
     />
   );
 }

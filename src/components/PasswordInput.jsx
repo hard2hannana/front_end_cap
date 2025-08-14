@@ -11,6 +11,7 @@ function PasswordInput(inputId, name) {
         name={name}
         type={showPassword ? "text" : "password"}
         placeholder="&#x1F512;  Password"
+        required={true}
       />
       <button
         type="button"

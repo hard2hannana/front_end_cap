@@ -8,7 +8,7 @@ export default function Specials() {
             <div className="container specials-body">
               <div className="card-title">
                 <FadeUpOnScroll>
-                <h2>This week's specials!</h2>
+                <h2 className="specials-title">This week's specials!</h2>
                 </FadeUpOnScroll>
                 <button>Order Online</button>
               </div>
