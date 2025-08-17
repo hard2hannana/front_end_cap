@@ -10,7 +10,7 @@ export default function Specials() {
                 <FadeUpOnScroll>
                 <h2 className="specials-title">This week's specials!</h2>
                 </FadeUpOnScroll>
-                <button>Order Online</button>
+                <button className="btn-primary">Order Online</button>
               </div>
                  {specials.map((dish) => (
               <div className="card-item" key={dish.id}>

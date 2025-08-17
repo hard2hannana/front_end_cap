@@ -35,7 +35,7 @@ export default function Footer() {
           <h3 className="foot-title">Contact</h3>
           <ul className="foot-links">
             <li><a href="tel:123-456-7890">123-456-7890</a></li>
-            <li><a href="mailto:contact@LittleLemon.com">contact@LittleLemon.com</a></li>
+            <li><a href="mailto:contact@littlelemon.com">contact@littlelemon.com</a></li>
           </ul>
         </div>
         <div className="socials">

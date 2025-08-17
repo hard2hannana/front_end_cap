@@ -9,7 +9,9 @@ import Reviews from "./components/Reviews";
 import About from "./components/About";
 import Login from "./components/Login";
 import Menu from "./components/Menu";
+import Reservations from "./components/Reservations.jsx";
 import ScrollToTop from "./components/ScrollTop.jsx";
+import ConfirmedBooking from "./components/ConfirmedBooking.jsx";
 
 export default function App() {
   return (
@@ -30,7 +32,9 @@ export default function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
-        <Route path="menu" element={<Menu />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/confirmed" element={<ConfirmedBooking />} />
         {/* Add more routes here if you want */}
       </Routes>
       <Footer />

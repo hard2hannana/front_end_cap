@@ -6,11 +6,14 @@ export default function AuthToggle({ value, onChange }) {
       aria-label="Sign in or Sign up"
     >
       <button
+    
         type="button"
         role="radio"
         aria-checked={value === "signin"}
         disabled={value === "signin"}
-        className={`btn btn-left ${value === "signin" ? "active" : ""}`}
+        className={`btn btn-left ${
+          value === "signin" ? "active" : ""
+        } btn-primary`}
         onClick={() => onChange("signin")}
       >
         Sign In
@@ -21,7 +24,7 @@ export default function AuthToggle({ value, onChange }) {
         role="radio"
         aria-checked={value === "signup"}
         disabled={value === "signup"}
-        className={`btn btn-right ${value === "signup" ? "active" : ""}`}
+        className={`btn btn-right ${value === "signup" ? "active" : ""} btn-primary`}
         onClick={() => onChange("signup")}
       >
         Sign Up
