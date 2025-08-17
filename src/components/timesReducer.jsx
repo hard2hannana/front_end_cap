@@ -14,5 +14,6 @@ export function timesReducer(state, action) {
       return state ?? [];
   }
 }
-
-
+export function updateTimes(selectedDate, currentTimes) {
+  return currentTimes; // placeholder behavior
+}
