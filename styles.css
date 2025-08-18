@@ -447,12 +447,18 @@ header {
   border-bottom: 2px solid var(--pYellow);
   margin: 2em 0;
 }
+.details-wrapper,
 .res-wrapper {
   background: var(--bgColour);
   width: 90%;
   margin: 2em auto;
   padding: 3em 2em;
   border-radius: 10px;
+}
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .res-content-wrapper {
   width: 80%;
@@ -494,6 +500,29 @@ header {
   margin: 0 auto;
   border: 0;
   border-radius: 1px;
+}
+.form-pane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.input-column {
+  display: flex;
+  flex-direction: column;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  text-align: left;
+}
+.summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
 }
 .login-page {
   background-color: var(--pGreen);

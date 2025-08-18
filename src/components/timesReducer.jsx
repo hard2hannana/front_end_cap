@@ -1,8 +1,6 @@
 
-const DEFAULT = ["17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"];
-
 export function initializeTimes() {
-  return DEFAULT;
+  return ["17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"];
 }
 
   
@@ -14,6 +12,6 @@ export function timesReducer(state, action) {
       return state ?? [];
   }
 }
-export function updateTimes(selectedDate, currentTimes) {
-  return currentTimes; // placeholder behavior
-}
+
+
+

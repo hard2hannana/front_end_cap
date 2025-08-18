@@ -1,11 +1,12 @@
 // src/components/timesReducer.test.js
 import { describe, it, expect } from "vitest";
-import { initializeTimes, updateTimes } from "./timesReducer.js";
+import { initializeTimes } from "./components/timesReducer.jsx";
+import { updateTimes} from "./components/Main.jsx";
 
 describe("initializeTimes", () => {
   it("returns the expected default times", () => {
     expect(initializeTimes()).toEqual([
-      "17:00","17:30","18:00","18:30","19:00","19:30","20:00"
+  
     ]);
   });
 });
