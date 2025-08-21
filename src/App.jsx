@@ -12,7 +12,6 @@ import Menu from "./components/Menu";
 import Reservations from "./components/Reservations.jsx";
 import ScrollToTop from "./components/ScrollTop.jsx";
 import ConfirmedBooking from "./components/ConfirmedBooking.jsx";
-import GuestDetails from "./components/GuestDetails.jsx";
 
 
 export default function App() {
@@ -37,7 +36,6 @@ export default function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
-        <Route path="/guest" element={<GuestDetails />} />
         {/* Add more routes here if you want */}
       </Routes>
       <Footer />

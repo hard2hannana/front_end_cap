@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import GuestDetails from "./GuestDetails";
+
 
 
 const toLocalDate = (d = new Date()) =>
@@ -9,12 +8,11 @@ const toLocalDate = (d = new Date()) =>
     .slice(0, 10);
 
 export default function BookingDetails({
-  
+  onNext,
   availableTimes, 
   updateTimes = () => {},
 }) {
-console.log("[BookingDetails] received availableTimes:", availableTimes); 
-  const navigate = useNavigate();
+  
   const today = toLocalDate();
 
   const [availableGuests, setAvailableGuests] = useState(
@@ -69,11 +67,11 @@ console.log("[BookingDetails] received availableTimes:", availableTimes);
   function handleSubmit(e) {
     e.preventDefault();
     // pass booking data to the next screen
-    navigate("/guest", { state: { booking: formBooking } });
+    onNext(formBooking);
   }
 
   return (
-    <form className="booking-form" onSubmit={handleSubmit}>
+    <form className="form-booking" onSubmit={handleSubmit}>
       <div className="input-row">
         <input
           type="date"

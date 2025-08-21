@@ -4,7 +4,7 @@ import BookingDetails from "./BookingDetails";
 
 
 
-export default function Main() {
+export default function Main({ onNext }) {
   const [availableTimes, dispatch] = useReducer(
     timesReducer,
     [],
@@ -31,6 +31,7 @@ export default function Main() {
   return (
     <div>
       <BookingDetails
+        onNext={onNext}
         availableTimes={availableTimes}
         updateTimes={updateTimes}
       />
