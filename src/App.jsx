@@ -13,6 +13,7 @@ import Reservations from "./components/Reservations.jsx";
 import ScrollToTop from "./components/ScrollTop.jsx";
 import ConfirmedBooking from "./components/ConfirmedBooking.jsx";
 
+
 export default function App() {
   return (
     <Router basename="/front_end_cap">

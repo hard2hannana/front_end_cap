@@ -31,6 +31,7 @@ import { toast } from "react-toastify";
           <button type="submit" className="btn signin-btn">
             Submit
           </button>
+          <small className="forgot-password"><a href="#">Forgot password?</a></small>
         </form>
       </div>
     </section>

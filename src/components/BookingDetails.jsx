@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify"
 
 
 
@@ -10,16 +8,12 @@ const toLocalDate = (d = new Date()) =>
     .slice(0, 10);
 
 export default function BookingDetails({
-  
-  availableTimes = [], // <-- default to [] so .map never crashes
+  onNext,
+  availableTimes, 
   updateTimes = () => {},
 }) {
-console.log("[BookingDetails] received availableTimes:", availableTimes); 
-  const navigate = useNavigate();
+  
   const today = toLocalDate();
-
-  // availableTimes = ["17:00","17:30","18:00","18:30","19:00","19:30","20:00"],
-  // updateTimes
 
   const [availableGuests, setAvailableGuests] = useState(
     Array.from({ length: 12 }, (_, i) => i + 1).map((n) => ({
@@ -32,7 +26,7 @@ console.log("[BookingDetails] received availableTimes:", availableTimes);
     "Birthday!",
     "Anniversary!",
   ]);
-  const [formData, setFormData] = useState({
+  const [formBooking, setformBooking] = useState({
     date: today,
     time: "",
     guests: "",
@@ -41,7 +35,7 @@ console.log("[BookingDetails] received availableTimes:", availableTimes);
 
   useEffect(() => {
     if (!availableTimes.length) return;
-    setFormData((f) => {
+    setformBooking((f) => {
       const desired =
         f.time && availableTimes.includes(f.time) ? f.time : availableTimes[0];
       if (desired === f.time) return f;
@@ -52,7 +46,7 @@ console.log("[BookingDetails] received availableTimes:", availableTimes);
   useEffect(() => {
     if (!availableGuests.length) return;
     const values = availableGuests.map((g) => g.value);
-    setFormData((f) => {
+    setformBooking((f) => {
       const current = Number(f.guests);
       const next = values.includes(current) ? current : values[0];
       return { ...f, guests: next };
@@ -61,7 +55,7 @@ console.log("[BookingDetails] received availableTimes:", availableTimes);
 
   function handleChange(e) {
     const { name, value } = e.target;
-    setFormData((f) => ({
+    setformBooking((f) => ({
       ...f,
       [name]: name === "guests" ? Number(value) : value,
     }));
@@ -72,33 +66,23 @@ console.log("[BookingDetails] received availableTimes:", availableTimes);
 
   function handleSubmit(e) {
     e.preventDefault();
-    const { date, time, guests, occasion } = formData;
-    const guestsLabel =
-      availableGuests.find((g) => g.value === guests)?.label ||
-      `${guests} ${guests === 1 ? "person" : "people"}`;
-
-    toast.success(
-      `Booked: ${guestsLabel} on ${date} at ${time} — ${occasion}`,
-      { autoClose: 4000 }
-    );
-    navigate("/confirmed");
-
-    console.log("Booking: ", formData);
+    // pass booking data to the next screen
+    onNext(formBooking);
   }
 
   return (
-    <form className="booking-form" onSubmit={handleSubmit}>
+    <form className="form-booking" onSubmit={handleSubmit}>
       <div className="input-row">
         <input
           type="date"
           name="date"
-          value={formData.date}
+          value={formBooking.date}
           onChange={handleChange}
           min={today}
         />
         <select
           name="time"
-          value={formData.time}
+          value={formBooking.time}
           onChange={handleChange}
           required
         >
@@ -111,7 +95,7 @@ console.log("[BookingDetails] received availableTimes:", availableTimes);
 
         <select
           name="guests"
-          value={formData.guests}
+          value={formBooking.guests}
           onChange={handleChange}
           required
         >
@@ -123,7 +107,7 @@ console.log("[BookingDetails] received availableTimes:", availableTimes);
         </select>
         <select
           name="occasion"
-          value={formData.occasion}
+          value={formBooking.occasion}
           onChange={handleChange}
         >
           {availableOccasion.map((o) => (

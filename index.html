@@ -14,7 +14,7 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <script src="https://kit.fontawesome.com/712be561a4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://raw.githubusercontent.com/courseraap/capstone/main/api.js"></script>
+  
   
 </head>
 
@@ -22,6 +22,14 @@
 
 <body>
   <div id="root"></div>
+  <script src="/api.js?v=1"></script>
+
+  <script>
+    // shim so React can use it
+    if (typeof fetchAPI === "function") window.fetchAPI = fetchAPI;
+    if (typeof submitAPI === "function") window.submitAPI = submitAPI;
+    console.log("[index.html] loaded fetchAPI:", typeof window.fetchAPI);
+  </script>
   <script type="module" src="src/main.jsx"></script>
   
 </body>
