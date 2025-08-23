@@ -12,6 +12,7 @@ import Menu from "./components/Menu";
 import Reservations from "./components/Reservations.jsx";
 import ScrollToTop from "./components/ScrollTop.jsx";
 import ConfirmedBooking from "./components/ConfirmedBooking.jsx";
+import OrderOnline from "./components/OrderOnline.jsx"
 
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/reservations" element={<Reservations />} />
+        <Route path="/orderOnline" element={<OrderOnline />} />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
         {/* Add more routes here if you want */}
       </Routes>

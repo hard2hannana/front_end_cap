@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom"
-import Reservations from "./src/components/Reservations.jsx";
+import Reservations from "./components/Reservations.jsx";
 import { BrowserRouter } from "react-router-dom";
 
 test('renders the "Find a table" heading', () => {

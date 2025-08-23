@@ -157,7 +157,7 @@ img {
 } 
 @media (max-width: 950px) {
   .container {
-    width: 98%;
+    width: 90%;
   }
   .about-header-content {
     padding: 2em 1.5em;
@@ -196,9 +196,7 @@ img {
   color: #333 ;
   padding: 1rem;
   margin: 0;
-  z-index: 10;
-  
-  
+  z-index: 10; 
 }
 a {
   text-decoration: none;
@@ -292,7 +290,16 @@ header {
 .specials {
   background: var(--bgColour);
 }
-
+.features {
+  background: var(--pYellow);
+  margin-top: 2em;
+}
+.features-title {
+  background: linear-gradient(45deg, #36574b, #076269);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .specials-body {
   display: flex;
   flex-direction: column;
@@ -305,10 +312,6 @@ header {
   margin-bottom: 8px;
 }
 .card-item {
-  max-width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
   background-color: var(--highlight);
   border-radius: 25px;
   border: 2px solid var(--bP);
@@ -446,9 +449,9 @@ header {
   padding: 0 0 .3em;
 }
 .underline-menu-title {
-  width: 100%;
-  border-bottom: 2px solid var(--pYellow);
-  margin: 2em 0;
+  width: 80%;
+  border-bottom: 5px solid var(--pGreen);
+  margin: 2em auto 1em;
 }
 .res-container {
     background-image: url("/src/assets/busySpot.jpg");
@@ -538,6 +541,36 @@ header {
   list-style: none;
   margin: 0;
   padding: 1em 0;
+}
+.orderOnline-nav {
+  padding: 1em 0 0;
+  margin: 2em auto;
+}
+.orderOnline-nav ul {
+  font-family: var(--pFont);
+  list-style: none;
+  margin: 0;
+  gap: 5vw;
+}
+.orderOnline-nav a {
+  background: linear-gradient(45deg, #495e57, #90a814);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  font-size: 3.2rem;
+}
+.btn-on-right {
+  text-align: right;
+}
+.cart-btn {
+  background: linear-gradient(45deg, #495e57, #f4f414);
+    
+  border-radius: 50px;
+  border: 0;
+  font-size: 2rem;
+  padding: .5em 1.75em;
+  margin-right: 10vw;
 }
 .login-page {
   background-color: var(--pGreen);
@@ -695,6 +728,15 @@ background-color: inherit;
   margin: 0 auto;
   padding: 4em;
 }
+.add-cart-btn {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.btn-oo {
+  font-size: 1rem;
+  padding: .3em 1em;
+}
 /* Footer */
 footer {
   text-align: center;
@@ -717,7 +759,6 @@ footer {
   padding-left: 10px;
 
 }
-
 .foot-links {
   display: flex;
   flex-direction: column;
@@ -727,22 +768,18 @@ footer {
   gap: 1em;
   ;
 }
-
 .foot-links a {
   color: var(--bH);
   font-family: var(--pFont);
   font-size: 1.4rem;
   font-weight: 300;
 }
-
 .foot-links a:hover {
   color: #495e57;
 }
-
 .foot-links li {
   transition: transform 0.32s ease-out;
 }
-
 .foot-links li:hover {
   transform: scale(1.1);
 }
@@ -847,11 +884,14 @@ footer {
   .specials {
     padding-top: min(10vw, 10em);
   }
+  .features {
+    padding-top: min(5vw, 10em);
+  }
   .specials-body {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 250px));
     justify-content: center;
-    gap: 5em;
+    gap: 3em;
   }
   .card-title {
     grid-column: 1 / -1;
@@ -873,8 +913,11 @@ footer {
     grid-column: 1 / -1;
   }
   .menu-card {
-    display: flex;
-    border-bottom: 2px solid var(--pYellow);
+position: relative;
+  /* makes absolute children anchor to card */
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: .5rem;    border-bottom: 2px solid var(--pYellow);
   }
   .menu-card:last-child {
     margin-bottom: 5em;
@@ -927,6 +970,10 @@ footer {
     width: 100%;
     justify-content: center;
   }
+  .orderOnline-nav ul{
+    display: flex;
+    flex-direction: row;
+  }
   .container-foot {
     display: flex;
     justify-content: space-between;
@@ -941,7 +988,7 @@ footer {
 
 @media (min-width: 700px) and (max-width: 1200px) { 
   
-  .specials-body,
+  
   .container-nav {
     display: block;
   }
@@ -960,9 +1007,7 @@ footer {
      width: 250px;
      height: 300px;
     }
-  .specials-body {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  }
+  
   .review-content {
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 7em;
@@ -970,7 +1015,7 @@ footer {
 }
 @media (min-width: 1450px) {
   .specials-body {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   .review-content {

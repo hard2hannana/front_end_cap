@@ -1,4 +1,5 @@
 export default function MenuCard({ category, name, price, description, itemImage }) {
+  
   return (
     <div className="menu-card">
       <img className="menuImage" src={itemImage} alt={name} />
