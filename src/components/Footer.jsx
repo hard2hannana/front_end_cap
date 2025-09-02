@@ -26,7 +26,7 @@ export default function Footer() {
               <NavLink to="/orderOnline" end className={({ isActive }) => isActive ? "active" : undefined}>Order online</NavLink>
             </li>
             <li>
-              <NavLink to="/reservations" end className={({ isActive }) => isActive ? "active" : undefined}>Login</NavLink>
+              <NavLink to="/login" end className={({ isActive }) => isActive ? "active" : undefined}>Login</NavLink>
             </li>
           </ul>
         </div>

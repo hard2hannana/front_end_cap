@@ -1,8 +1,8 @@
-export default function MenuCard({ category, name, price, description, itemImage }) {
+export default function MenuCard({ category, name, price, description, image }) {
   
   return (
     <div className="menu-card">
-      <img className="menuImage" src={itemImage} alt={name} />
+      <img className="menuImage" src={image} alt={name} />
       <div className="menu-content">
         <div className="menu-details">
           <h4>{name} </h4>

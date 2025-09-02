@@ -244,7 +244,9 @@ a:hover {
     width: 10rem;
     padding: 5px 0;
 }
-
+.active {
+  border-bottom: 2px solid var(--pYellow);
+}
  /* Responsive Styles  */
  @media (min-width: 700px) {
   .logo {
@@ -826,16 +828,15 @@ background-color: inherit;
 .qty-row {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   width: fit-content;
+  margin: 0 auto;
 }
 .qty-wrapper {
   display: flex;
   align-items: center;
   background: var(--pYellow);
   border-radius: 25px;
-  padding: 0 .25em;
+  padding: .25em .4em;
   gap: .75rem;
 }
 .qty-btn {
@@ -843,8 +844,7 @@ background-color: inherit;
   font-weight: 700;
   color: #333;
   border: 0;
-  margin-top: .25em;
-  
+  margin-top: .25;
   font-size: 2rem;
   font-weight: 700;
   cursor: pointer;
@@ -866,6 +866,41 @@ background-color: inherit;
   font-weight: 700;
   cursor: pointer;
 }
+.cart-heading {
+  background: linear-gradient(45deg, var(--pYellow), #ba9f18);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  text-align: center;
+
+}
+.cart-list{
+  display: flex;
+  flex-direction: column;
+}
+.cart-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+.cart-col-header {
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--pYellow);
+  margin-bottom: 0.5rem;
+}
+.cart-summary {
+  font-size: 1.1em;
+}
+.cart-summary:last-child {
+  border-top: 2px solid #333;
+}
+.cart-space {
+  margin-top: 1em;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -1083,7 +1118,7 @@ position: relative;
   .input-row input {
     border-bottom: 0;
   }
-  .input
+  .input,
   .login-wrapper {
     width: 400px;
   }
@@ -1106,6 +1141,7 @@ position: relative;
   .qty-row {
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
     gap: .75em;
   
   }

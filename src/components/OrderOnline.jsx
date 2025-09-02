@@ -3,10 +3,26 @@ import OrderMenuCard from "./OrderMenuCard";
 import specials from "../data/specialsData";
 import Features from "./Features"
 import ItemModal from "./ItemModal";
+import CartModal from "./CartModal";
 import { useState } from "react";
 
 
-export default function Menu({ addToCart }) {
+export default function Menu() {
+  const [cart, setCart] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const addToCart = (item, qty) => {
+    setCart((prev) => {
+      const found = prev.find((i) => i.id === item.id);
+      if (found) {
+        return prev.map((i) =>
+          i.id === item.id ? { ...i, qty: i.qty + qty } : i
+        );
+      }
+      return [...prev, { ...item, qty }];
+    });
+  };
+  
   const sections = menu.reduce((acc, item) => {
     (acc[item.category] ||= []).push(item);
     return acc;
@@ -14,6 +30,10 @@ export default function Menu({ addToCart }) {
 
   const [selectedItem, setSelectedItem] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openCart = () => setIsCartOpen(true);
+  const closeCart = () => setIsCartOpen(false);
+
 
   const openModal = (item) => {
     setSelectedItem(item);
@@ -28,7 +48,7 @@ export default function Menu({ addToCart }) {
     addToCart?.(item, qty);
     closeModal();
   };
-
+  
   const slug = (s) =>
     s
       .toLowerCase()
@@ -43,8 +63,12 @@ export default function Menu({ addToCart }) {
   return (
     <div className="menuItems">
       <div className="btn-on-right">
-        <button class="cart-btn">
-          <i class="fa-solid fa-cart-shopping"></i>
+        <button 
+          onClick={openCart}
+          aria-label="Cart"
+          className="cart-btn"
+        >
+          <i className="fa-solid fa-cart-shopping"></i>
         </button>
       </div>
       <div className="">
@@ -80,6 +104,13 @@ export default function Menu({ addToCart }) {
               onConfirm={confirmAdd}
               onClose={closeModal}
             />
+            <CartModal 
+            isOpen={isCartOpen} 
+            onClose={closeCart}
+            cart={cart}
+            setCart={setCart}
+            />
+            
           </section>
         ))}
       </div>
