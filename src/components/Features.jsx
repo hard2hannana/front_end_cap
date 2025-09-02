@@ -1,8 +1,14 @@
 
 import specials from "../data/specialsData";
 import FadeUpOnScroll from "./FadeUpOnScroll";
+import ItemModal from "./ItemModal";
 
-export default function Features() {
+
+
+export default function Features({ specials, onOpen }) {
+const inStock = true;
+
+
   return (
     <section className="features specials">
       <div className="container specials-body">
@@ -10,7 +16,7 @@ export default function Features() {
           <FadeUpOnScroll>
             <h2 className="specials-title features-title">Featured items</h2>
           </FadeUpOnScroll>
-        </div >
+        </div>
         {specials.map((dish) => (
           <div className="card-item" key={dish.id}>
             <img className="card-image" src={dish.image} alt={dish.name} />
@@ -19,8 +25,16 @@ export default function Features() {
                 <h3>{dish.name}</h3>
                 <h4>{dish.price}</h4>
               </div>
-              <div className="add-cart-btn">
-              <button className="btn-primary btn-oo">Add to cart</button>
+              <div className="feature-add-cart-btn">
+                <button
+                  type="button"
+                  className="btn-primary btn-oo-features"
+                  onClick={() => onOpen?.(dish)}
+                  aria-label={`Customize and Add ${dish.name} to cart`}
+                  disabled={!inStock}
+                >
+                  {inStock ? "Add item" : "Out of stock"}
+                </button>
               </div>
             </div>
           </div>

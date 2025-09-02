@@ -1,12 +1,33 @@
 import menu from "../data/menuData";
-import MenuCard from "./MenuCard";
+import OrderMenuCard from "./OrderMenuCard";
+import specials from "../data/specialsData";
 import Features from "./Features"
-export default function Menu() {
+import ItemModal from "./ItemModal";
+import { useState } from "react";
+
+
+export default function Menu({ addToCart }) {
   const sections = menu.reduce((acc, item) => {
     (acc[item.category] ||= []).push(item);
     return acc;
   }, {});
 
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (item) => {
+    setSelectedItem(item);
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedItem(null);
+  };
+
+  const confirmAdd = (item, qty) => {
+    addToCart?.(item, qty);
+    closeModal();
+  };
 
   const slug = (s) =>
     s
@@ -27,7 +48,7 @@ export default function Menu() {
         </button>
       </div>
       <div className="">
-        <Features />
+        <Features specials={specials} onOpen={openModal} />
       </div>
       <div className="container orderOnline-nav">
         <ul>
@@ -45,9 +66,20 @@ export default function Menu() {
             <h2 className="menu-header">{category}</h2>
             <div className="menu-grid">
               {items.map((item) => (
-                <MenuCard key={`${category}-${item.id}`} {...item} />
+                <OrderMenuCard
+                  key={`${category}-${item.id}`}
+                  item={item}
+                  onOpen={openModal}
+                />
               ))}
             </div>
+            <ItemModal
+              item={selectedItem}
+              isOpen={isModalOpen}
+              initialQty={1}
+              onConfirm={confirmAdd}
+              onClose={closeModal}
+            />
           </section>
         ))}
       </div>

@@ -21,7 +21,7 @@ const menu = [
     name: "Colossal Shrimp Cocktail",
     price: 16.95,
     description: "Enjoy our jumbo shrimp cocktail herb-poached shrimp, perfectly chilled and served with house-made cocktail sauce and fresh lemon",
-    itemImage: shrimp,
+    image: shrimp,
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const menu = [
     description:
       "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
     price: "$5.99",
-    itemImage: bruchetta,
+    image: bruchetta,
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const menu = [
     name: "10 Wings", 
     price: 17.95,
     description: "Perfectly smoked chicken wings tossed in your choice of: Old Bay, Garlic Parm, BBQ, Hot, Mild, Sweet Thai Chili or Teriyaki",
-    itemImage: wings,
+    image: wings,
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const menu = [
     name: "Fried Green Tomatoes", 
     price: 13.95,
     description: "Fried green tomatoes breaded in cornmeal and fried to a beautiful crust, topped with goat cheese crumbles, bacon bits and drizzled with a balsamic glaze",
-    itemImage: greenTomatoes,
+    image: greenTomatoes,
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const menu = [
     name: "Classic Cheeseburger", 
     price: 16.95,
     description: "8 oz. angus beef patty, your choice of temperature, topped with your choice of cheese, leaf lettuce, tomato and pickles on a toasted brioche bun",
-    itemImage: burger,
+    image: burger,
   },
   {
     id: 6,  
@@ -62,7 +62,7 @@ const menu = [
     name: "Salmon", 
     price: 26.95,
     description: "Grilled or blackened salmon drizzled with teriyaki glaze and served with rice pilaf with grilled asparagus",
-    itemImage: fish,
+    image: fish,
   },
   {
     id: 7,
@@ -70,7 +70,7 @@ const menu = [
     name: "Filet Mignon",
     price: 48.95,
     description: "8 oz. premium beef tenderloin cooked to desired temperature, topped with a red wine demi-glace over asparagus and creamy mashed potatoes.",
-    itemImage: steak,
+    image: steak,
   },
   {
     id: 8,
@@ -78,7 +78,7 @@ const menu = [
     name: "Blackened Chicken Pasta",
     price: 21.95,
     description: "Chicken blackened and grilled served atop homemade fettuccini tossed in a parmaesean cream sauce.",
-    itemImage: pasta,
+    image: pasta,
   },
   {
     id: 9,
@@ -86,7 +86,7 @@ const menu = [
     name: "Cheesecake",
     price: 8.95,
     description: "House prepared cheesecake drizzled with caramel, chocolate and toasted pecans.",
-    itemImage: cheesecake,
+    image: cheesecake,
   },
   {
     id: 10,
@@ -94,7 +94,7 @@ const menu = [
     name: "Key Lime Pie",
     price: 8.95,
     description: "A bright and sunny Florida citrus classic, Served with fresh house made whipped cream.",
-    itemImage: keyLime,
+    image: keyLime,
   },
   {
     id: 11,
@@ -103,7 +103,7 @@ const menu = [
     description:
       "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
     price: "5.00",
-    itemImage: lemonDessert,
+    image: lemonDessert,
   },
   {
     id: 12,
@@ -111,7 +111,7 @@ const menu = [
     name: "Mile High Dark Chocolate Cake",
     price: 8.95,
     description: "6 incredible layers of milk chocolate deliciousness, Served with fresh strawberries!",
-    itemImage: cake,
+    image: cake,
   }
 ]
 
